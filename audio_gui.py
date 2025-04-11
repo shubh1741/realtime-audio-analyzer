@@ -1,3 +1,28 @@
+"""
+Real-Time Audio Visualizer & Analyzer 🎧
+
+This PyQt5 application captures live audio from a selected microphone, visualizes the waveform 
+and spectrogram in real-time, and optionally applies noise suppression using the `noisereduce` library.
+
+Features:
+- Live waveform plot
+- Real-time spectrogram display
+- Noise suppression toggle (uses spectral gating)
+- Microphone device selector
+- Start/Stop buttons
+
+Dependencies:
+- numpy
+- pyaudio
+- noisereduce
+- scipy
+- matplotlib
+- PyQt5
+
+Author: Shubham Sahu
+"""
+
+
 import sys
 import numpy as np
 import pyaudio
@@ -142,6 +167,7 @@ class AudioVisualizer(QWidget):
 
         # Update data if it's 2D
         if Sxx_log.ndim == 2:
+            # Update spectrogram image
             self.spec_img.set_data(Sxx_log)
             self.spec_img.set_extent([0, t[-1] if len(t) else 1, 0, f[-1] if len(f) else self.rate / 2])
             self.spec_img.set_clim(np.min(Sxx_log), np.max(Sxx_log))
