@@ -29,6 +29,39 @@ When enabled, we pass the signal through the [`noisereduce`](https://github.com/
 ### 📈 Spectrogram
 The `scipy.signal.spectrogram` function is used to compute a time-frequency representation of the audio. We apply a logarithmic scale (`10 * log10`) for better contrast in the display.
 
+## 📈 What is a Spectrogram?
+
+A **spectrogram** is a visual representation of how the **frequency content** of a signal changes over **time**. It’s one of the most powerful tools in audio signal analysis. It’s like a movie of the **audio’s frequency energy** — showing not just how loud a signal is, but **which frequencies** are present and **when**.
+
+### 🔍 How to Read a Spectrogram
+
+- **X-axis** → Time (seconds)
+- **Y-axis** → Frequency (Hz)
+- **Color Intensity** → Amplitude or power of the signal at that time and frequency
+
+Think of it as a movie of your sound, showing **what frequencies** are present **and when**.
+
+### 🎵 Example Interpretation
+
+| Time → | | |
+|--------|--|--|
+| 🔊 **Low frequencies** (bottom) | bass, hum |
+| 🎶 **Mid frequencies** | voice, instruments |
+| 🔔 **High frequencies** (top) | hiss, cymbals, sibilance |
+
+- Bright colors = strong/loud signal
+- Dark colors = soft/quiet signal
+
+---
+
+## 🔬 How Spectrograms are Generated
+
+Internally, the signal is split into small chunks (windows), and each chunk is transformed using the **Short-Time Fourier Transform (STFT)**:
+
+1. Chop signal into overlapping frames
+2. Apply a **Fast Fourier Transform (FFT)** on each frame
+3. Stack the results to build a time-frequency map
+
 ### 🖼️ Visualization
 
 Plots are rendered live using `matplotlib` and embedded in the PyQt5 GUI using `FigureCanvasQTAgg`. We refresh the canvas approximately every 50 milliseconds using a `QTimer`.
