@@ -43,13 +43,13 @@ pip install numpy scipy matplotlib pyqt5 pyaudio noisereduce
 
 ---
 
-# Project Structure
+## Project Structure
 ├── audio_gui.py       # Main application
 ├── README.md          # Project documentation
 └── requirements.txt   # (Optional) for pip install
 ---
 
-# How To Run
+## How To Run
 
 ```bash
 python audio_gui.py
@@ -62,7 +62,7 @@ You can switch between Waveform and Spectrogram tabs
 
 ---
 
-# 📚 Learning Goals
+## 📚 Learning Goals
 This project is a great way to learn:
 Audio signal processing (time domain + frequency domain)
 Realtime plotting with Matplotlib
@@ -72,5 +72,5 @@ Working with streaming audio data (PyAudio)
 Multimodal visualization (waveform + spectrogram)
 
 ---
-#✨ Author
+##✨ Author
 Shubham Sahu
