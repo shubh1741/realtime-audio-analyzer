@@ -41,10 +41,13 @@ Install everything with:
 ```bash
 pip install numpy scipy matplotlib pyqt5 pyaudio noisereduce
 
+---
+
 # Project Structure
 ├── audio_gui.py       # Main application
 ├── README.md          # Project documentation
 └── requirements.txt   # (Optional) for pip install
+---
 
 # How To Run
 
@@ -57,6 +60,8 @@ Toggle "Enable Noise Suppression" if you like
 Click Start to begin visualizing
 You can switch between Waveform and Spectrogram tabs
 
+---
+
 # 📚 Learning Goals
 This project is a great way to learn:
 Audio signal processing (time domain + frequency domain)
@@ -66,5 +71,6 @@ Spectral noise reduction
 Working with streaming audio data (PyAudio)
 Multimodal visualization (waveform + spectrogram)
 
+---
 #✨ Author
 Shubham Sahu
