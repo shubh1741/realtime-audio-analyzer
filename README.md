@@ -31,7 +31,6 @@ The `scipy.signal.spectrogram` function is used to compute a time-frequency repr
 
 ### 🖼️ Visualization
 Plots are rendered live using `matplotlib` and embedded in the PyQt5 GUI using `FigureCanvasQTAgg`. We refresh the canvas approximately every 50 milliseconds using a `QTimer`.
-
 ---
 
 ## 🧩 Dependencies
@@ -40,37 +39,38 @@ Install everything with:
 
 ```bash
 pip install numpy scipy matplotlib pyqt5 pyaudio noisereduce
-
----
-
-## Project Structure
-├── audio_gui.py       # Main application
-├── README.md          # Project documentation
-└── requirements.txt   # (Optional) for pip install
+```
 ---
 
 ## How To Run
 
 ```bash
 python audio_gui.py
+```
+---
 
-Once it launches:
-Select your microphone from the dropdown
-Toggle "Enable Noise Suppression" if you like
-Click Start to begin visualizing
-You can switch between Waveform and Spectrogram tabs
+Once it launches: 
+- Select your microphone from the dropdown
+- Toggle "**Enable Noise Suppression**" if you like
+- Click **Start** to begin visualizing
+- You can switch between **Waveform** and **Spectrogram** tabs
 
 ---
 
 ## 📚 Learning Goals
+
 This project is a great way to learn:
-Audio signal processing (time domain + frequency domain)
-Realtime plotting with Matplotlib
-GUI development with PyQt5
-Spectral noise reduction
-Working with streaming audio data (PyAudio)
-Multimodal visualization (waveform + spectrogram)
+1. Audio signal processing (time domain + frequency domain)
+2. Realtime plotting with Matplotlib
+3. GUI development with PyQt5
+4. Spectral noise reduction
+5. Working with streaming audio data (PyAudio)
+6. Multimodal visualization (waveform + spectrogram)
 
 ---
-##✨ Author
+
+## ✨ Author
+
 Shubham Sahu
+
+---
