@@ -30,7 +30,9 @@ When enabled, we pass the signal through the [`noisereduce`](https://github.com/
 The `scipy.signal.spectrogram` function is used to compute a time-frequency representation of the audio. We apply a logarithmic scale (`10 * log10`) for better contrast in the display.
 
 ### 🖼️ Visualization
+
 Plots are rendered live using `matplotlib` and embedded in the PyQt5 GUI using `FigureCanvasQTAgg`. We refresh the canvas approximately every 50 milliseconds using a `QTimer`.
+
 ---
 
 ## 🧩 Dependencies
